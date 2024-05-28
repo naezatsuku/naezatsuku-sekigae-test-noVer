@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<div id="desks">
+    <div class="yline1">
+        <div class="desk" id="a1">0</div>
+        <div class="desk" id="a2">0</div>
+        <div class="desk" id="a3">0</div>
+        <div class="desk" id="a4">0</div>
+        <div class="desk" id="a5">0</div>
+        <div class="desk" id="a6">0</div>
+        <div class="desk" id="a7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="b1">0</div>
+        <div class="desk" id="b2">0</div>
+        <div class="desk" id="b3">0</div>
+        <div class="desk" id="b4">0</div>
+        <div class="desk" id="b5">0</div>
+        <div class="desk" id="b6">0</div>
+        <div class="desk" id="b7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="c1">0</div>
+        <div class="desk" id="c2">0</div>
+        <div class="desk" id="c3">0</div>
+        <div class="desk" id="c4">0</div>
+        <div class="desk" id="c5">0</div>
+        <div class="desk" id="c6">0</div>
+        <div class="desk" id="c7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="d1">0</div>
+        <div class="desk" id="d2">0</div>
+        <div class="desk" id="d3">0</div>
+        <div class="desk" id="d4">0</div>
+        <div class="desk" id="d5">0</div>
+        <div class="desk" id="d6">0</div>
+        <div class="desk" id="d7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="e1">0</div>
+        <div class="desk" id="e2">0</div>
+        <div class="desk" id="e3">0</div>
+        <div class="desk" id="e4">0</div>
+        <div class="desk" id="e5">0</div>
+        <div class="desk" id="e6">0</div>
+        <div class="desk" id="e7">0</div>
+    </div>
+    <div class="yline1">
+        <div class="desk" id="f1">空席</div>
+        <div class="desk" id="f2">0</div>
+        <div class="desk" id="f3">0</div>
+        <div class="desk" id="f4">0</div>
+        <div class="desk" id="f5">0</div>
+        <div class="desk" id="f6">空席</div>
+        <div class="desk" id="f7">空席</div>
+    </div>
+    </div>
+</div>
+<p　class="aa">1年4組用の席替え</p>
+<div class="but-box"><button class="but" onclick="func1()">席替スイッチ</button></div>
+<img src="https://pbs.twimg.com/media/GOqJzTYbQAAyB0w?format=jpg&name=large" alt="noimage" id="img-place" style="display:none;">
+<style>
+    @media screen and (max-width: 900px) {
+        #img-place{
+            position:absolute;
+            top:80%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        #kyota{
+        width:350px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img1{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img2{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img3{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img4{
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img5{
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #img6{
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #imgA{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #imgB{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+    #imgC{
+        width:500px;
+        height: auto;
+        position: absolute;
+        top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ display: none;
+    }
+.effects{
+    display:none;
+  position:absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:375px;
+ height:600px;
+ background-color:yellow;
+}
+    #btn_go{
+        display: none;
+        position: absolute;
+        width:auto;
+        height:auto;
+        font-size:80px;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    #btn_go2{
+        display: none;
+        position: absolute;
+        width:auto;
+        height:auto;
+        font-size:80px;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    #btn_go3{
+        display: none;
+        position: absolute;
+        width:auto;
+        height:auto;
+        font-size:80px;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    #sho_num{
+        display: none;
+position: absolute;
+width: 400px;
+height: 900px;
+top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+background-color: aliceblue;
+    }
+.apap{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size: 230px;
+   align-items: center;
+    justify-content: center;
+}
+    div.desk{
+        display:flex;
+        width:36px;
+        height: 30px;
+        margin:5px;
+        border:solid 1px black;
+       align-items:center;
+       justify-content: center;
+       font-size:26px;
+       background-color: #338DC9;
+       color:#eee; 
+    }
+    div.yline1{
+        width:320px;
+        margin:1px;
+        display:flex;
+    }
+    
+    #desks{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        
+    }      
+.aa{
+    font-size:40px;
+    color:black;
+}
+.but-box{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+.but{
+    font-size:60px;
+    font-weight: bold;
+    color:yellow;
+    background-color: red;
+    width:auto;
+    height:auto;
+}
+#img-place{
+    width: 1000px;
+    position: absolute;
+    top:80%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    
+    
+}
+.show{
+    
+    width:350px;
+    height:auto;
+    background-color: #eee;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    
+}
+.num{
+    margin: 0%;
+    display: flex;
+    text-align: center;
+    font-size:50px;
+}
+.ss{
+    
+    
+    font-size:30px;
+    font-weight: bold;
+}
+.ss{
+    display:none;
+}
+.show{
+    display:none;
+}
+#f1,#f6,#f7{
+    font-size:10px;
+}
+    }
+    @media screen and (min-width: 901px) {
+    div.desk{
+        display:flex;
+        width:160px;
+        height: 85px;
+        margin:5px;
+        border:solid 4px black;
+       align-items:center;
+       justify-content: center;
+       font-size:40px;
+       background-color: #338DC9;
+       color:#eee; 
+    }
+    div.yline1{
+        width:1000px;
+        margin:5px;
+        display:flex;
+    }
+    
+    #desks{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }      
+.aa{
+    font-size:40px;
+    color:black;
+}
+.but-box{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+.but{
+    font-size:60px;
+    font-weight: bold;
+    color:yellow;
+    background-color: red;
+    width:auto;
+    height:auto;
+}
+#img-place{
+    width: 1000px;
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    
+    
+}
+}
+</style>
+<script>
+    function func2(){
+        document.getElementById("img-place").style.display="none";
+    }
+    function func1(){
+    document.getElementById("img-place").style.display="block";
+    setTimeout(func2,3000)
+    let numbers=[];
+    let desks=["a1","a2","a3","a4","a5","a6","a7","b1","b2","b3","b4","b5","b6","b7","c1","c2","c3","c4","c5","c6","c7","d1","d2","d3","d4","d5","d6","d7","e1","e2","e3","e4","e5","e6","e7","f2","f3","f4","f5"];
+    for(let i=1;i<=39;i++){
+        numbers.push(i);
+    }
+    for(let i=0;i<39;i++){
+    let a=Math.floor(Math.random()*numbers.length);
+    let number=numbers[a];
+    numbers.splice(a,1);
+    let tar=desks[i]
+    document.getElementById(tar).textContent=number;
+console.log(number,tar)
+    }
+}
+
+</script>
+
